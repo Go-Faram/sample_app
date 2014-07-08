@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+#require 'minitest/autorun'
 describe User do
 	before do
 	@user=User.new(name:"Example User",
