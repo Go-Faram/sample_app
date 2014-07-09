@@ -16,6 +16,8 @@ end
 	it{should respond_to(:password_confirmation)}
 	it{should respond_to(:authenticate)}
 
+  it{should respond_to(:remember_token)}
+
 	it{should be_valid}
 
 	describe "when name is not present" do
@@ -82,6 +84,7 @@ describe "with a password that's too short" do
   it { should be_invalid }
 end
 
+
 describe "return value of authenticate method" do
   before { @user.save }
   let(:found_user) { User.find_by(email: @user.email) }
@@ -89,7 +92,6 @@ describe "return value of authenticate method" do
   describe "with valid password" do
     it { should eq found_user.authenticate(@user.password) }
   end
-
   describe "with invalid password" do
     let(:user_for_invalid_password) { found_user.authenticate("invalid") }
 
@@ -98,5 +100,9 @@ describe "return value of authenticate method" do
   end
 end
 
+  
+describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
 end
-
