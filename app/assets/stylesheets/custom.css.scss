@@ -143,6 +143,8 @@ input {
   @extend .control-group;
   @extend .error;
  }
+
+
 /* footer */
 
 footer {
@@ -165,6 +167,21 @@ footer {
     li {
       float: left;
       margin-left: 10px;
+    }
+  }
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
     }
   }
 }
