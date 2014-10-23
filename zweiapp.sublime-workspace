@@ -1,0 +1,716 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"col",
+				"collection"
+			],
+			[
+				"peo",
+				"people_xml"
+			],
+			[
+				"name",
+				"namespace"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/helpers/application_helper.rb",
+			"settings":
+			{
+				"buffer_size": 250,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/helpers/users_helper.rb",
+			"settings":
+			{
+				"buffer_size": 380,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "class UsersController < ApplicationController\n  before_action :signed_in_user ,\n                only: [:index, :edit, :update, :destroy, :following, :followers]\n  before_action :correct_user, only: [:edit, :update]\n  before_action :admin_user, only: :destory\n  def index\n    @users = User.paginate(page: params[:page])\n  end\n\n  def show\n    @user=User.find(params[:id])\n    @microposts = @user.microposts.paginate(page: params[:page])\n  end\n\n  def new\n    @user = User.new\n  end\n\n  def create\n    @user = User.new(user_params)\n    if @user.save\n      sign_in @user\n      flash[:success] = \"Welcome to the Sample App!\"\n      redirect_to @user\n    else\n      render 'new'\n    end\n  end\n\n  def edit\n    @user = User.find(params[:id])\n  end\n\n  def update\n    @user = User.find(params[:id])\n    if @user.update_attributes(user_params)\n      # Handle a successful update.\n      flash[:success]=\"Profile updated\"\n      redirect_to @user\n    else\n      render 'edit'\n    end\n  end\n\n  def destroy\n    User.find(params[:id]).destroy\n    flash[:success] = \"User destroyed.\"\n    redirect_to users_url\n  end\n\ndef following\n    @title = \"Following\"\n    @user = User.find(params[:id])\n    @users = @user.followed_users.paginate(page: params[:page])\n    render 'show_follow'\n  end\n\n  def followers\n    @title = \"Followers\"\n    @user = User.find(params[:id])\n    @users = @user.followers.paginate(page: params[:page])\n    render 'show_follow'\n  end\n\n  private\n\n  def user_params\n    params.require(:user).permit(:name, :email, :password,\n    :password_confirmation)\n  end\n\n  # Before filters\n\n  def signed_in_user\n    unless signed_in?\n    store_location\n    redirect_to signin_url  , notice: \"Please sign in.\" \n  end\nend\n  def correct_user\n    @user=User.find(params[:id])\n    redirect_to(root_path) unless current_user?(@user)\n  end\nend",
+			"file": "app/controllers/users_controller.rb",
+			"file_size": 1819,
+			"file_write_time": 130564476014002702,
+			"settings":
+			{
+				"buffer_size": 1821,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 1499,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/sessions_controller.rb",
+			"settings":
+			{
+				"buffer_size": 528,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1397,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 601,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/_user.html.erb",
+			"settings":
+			{
+				"buffer_size": 266,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 188,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pack isnt",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())\\"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/zwei/workspace/zwei_app",
+		"/home/zwei/workspace/zwei_app/app",
+		"/home/zwei/workspace/zwei_app/app/assets",
+		"/home/zwei/workspace/zwei_app/app/assets/stylesheets",
+		"/home/zwei/workspace/zwei_app/app/controllers",
+		"/home/zwei/workspace/zwei_app/app/helpers",
+		"/home/zwei/workspace/zwei_app/app/models",
+		"/home/zwei/workspace/zwei_app/app/views",
+		"/home/zwei/workspace/zwei_app/app/views/layouts",
+		"/home/zwei/workspace/zwei_app/app/views/sessions",
+		"/home/zwei/workspace/zwei_app/app/views/users",
+		"/home/zwei/workspace/zwei_app/config",
+		"/home/zwei/workspace/zwei_app/db",
+		"/home/zwei/workspace/zwei_app/db/migrate",
+		"/home/zwei/workspace/zwei_app/public"
+	],
+	"file_history":
+	[
+		"/home/zwei/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
+		"/home/zwei/workspace/shopping/app/views/index.html.erb",
+		"/home/zwei/workspace/shopping/app/views/layouts/application.html.erb",
+		"/home/zwei/workspace/shopping/config/initializers/inflections.rb",
+		"/home/zwei/workspace/shopping/.idea/runConfigurations/Development__shopping.xml",
+		"/home/zwei/workspace/nbd/db/migrate/20110726062611_create_users.rb",
+		"/home/zwei/workspace/demo/app/controllers/admin/people_controller.rb",
+		"/home/zwei/workspace/demo/app/views/admin/people/new.html.erb",
+		"/home/zwei/workspace/demo/app/views/admin/people/_form.html.erb",
+		"/home/zwei/workspace/demo/config/routes.rb",
+		"/home/zwei/workspace/demo/app/views/admin/people/index.html.erb",
+		"/home/zwei/workspace/demo/app/controllers/people_controller.rb",
+		"/home/zwei/workspace/nbd/app/models/article.rb",
+		"/home/zwei/workspace/nbd/app/controllers/nbd_journalists_controller.rb",
+		"/home/zwei/workspace/nbd/config/routes.rb",
+		"/home/zwei/workspace/nbd/app/controllers/application_controller.rb",
+		"/home/zwei/workspace/nbd/app/views/layouts/site_v3.html.erb",
+		"/home/zwei/workspace/nbd/config/initializers/wrap_parameters.rb",
+		"/home/zwei/workspace/nbd/app/views/mobile_server/_mobile_wrapper.html.erb",
+		"/home/zwei/workspace/nbd/app/models/weibo.rb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_analytics.html.erb",
+		"/home/zwei/workspace/nbd/doc/cms-flow/Posts_Analytics.html",
+		"/home/zwei/workspace/nbd/doc/cms-flow/Newspaper_Analytics.html",
+		"/home/zwei/workspace/nbd/doc/cms-flow/Column_Analytics.html",
+		"/home/zwei/workspace/nbd/doc/cms-flow/Channel_Analytics.html",
+		"/home/zwei/workspace/nbd/doc/cms-flow/Add_New_Ad.html",
+		"/home/zwei/workspace/nbd/app/models/articles_newspaper.rb",
+		"/home/zwei/workspace/nbd/config/application.rb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_footer_v3.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_footer_nav.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_footer.html.erb",
+		"/home/zwei/workspace/nbd/lib/patch/form_options_helper_patch.rb",
+		"/home/zwei/workspace/nbd/app/models/feature.rb",
+		"/home/zwei/workspace/nbd/app/models/tag.rb",
+		"/home/zwei/workspace/nbd/lib/patch/redis-objects-patch.rb",
+		"/home/zwei/workspace/nbd/Rakefile",
+		"/home/zwei/workspace/nbd/lib/tasks/import_kbb_votes_candidates.rake",
+		"/home/zwei/workspace/nbd/lib/tasks/patch_add_new_version_to_article_thumbnail_images.rake",
+		"/home/zwei/workspace/nbd/lib/tasks/import_2014_koubeibang_public_vote_options.rake",
+		"/home/zwei/workspace/nbd/lib/tasks/import_kbb_accounts_2014_09_02.rake",
+		"/home/zwei/workspace/nbd/lib/tasks/export_koubeibang_account_info.rake",
+		"/home/zwei/workspace/nbd/lib/tasks/export_touzibao_accounts.rake",
+		"/home/zwei/workspace/nbd/lib/tasks/export_kbb_accounts.rake",
+		"/home/zwei/workspace/nbd/lib/tasks/import_poll_options_for_koubei.rake",
+		"/home/zwei/workspace/nbd/app/controllers/premium/premium_base_controller.rb",
+		"/home/zwei/workspace/nbd/app/views/console/topics/edit_banner.html.erb",
+		"/home/zwei/workspace/nbd/app/views/console/koubeibangs/_kbb_detail_operation_bar.html.erb",
+		"/home/zwei/workspace/nbd/app/views/console/shared/_article_operation_bar_for_newspaper.html.erb",
+		"/home/zwei/workspace/nbd/app/views/console/comments/_comment_operation_bar.html.erb",
+		"/home/zwei/workspace/nbd/app/views/console/shared/_article_operation_bar.html.erb",
+		"/home/zwei/workspace/nbd/app/views/console/topics/_topic_operation_bar.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_special_top_bar.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_common_top_bar.html.erb",
+		"/home/zwei/workspace/nbd/public/stylesheets/top_bbs.css",
+		"/home/zwei/workspace/nbd/public/Top-verification.html",
+		"/home/zwei/workspace/nbd/app/models/ticket_order.rb",
+		"/home/zwei/workspace/nbd/app/uploaders/ticket_order_uploader.rb",
+		"/home/zwei/workspace/nbd/app/models/jobs/delete_static_page.rb",
+		"/home/zwei/workspace/nbd/lib/tasks/migrate_old_dingyuecard_data.rake",
+		"/home/zwei/workspace/nbd/fulltext_search_data/mmseg.ini",
+		"/home/zwei/workspace/nbd/app/models/element_article.rb",
+		"/home/zwei/workspace/nbd/app/models/jobs/delete_article_detail_static_page.rb",
+		"/home/zwei/workspace/nbd/public/stylesheets/sass/bourbon/functions/_modular-scale.scss",
+		"/home/zwei/workspace/nbd/app/models/ticket_order_escort.rb",
+		"/home/zwei/workspace/nbd/app/models/element_link.rb",
+		"/home/zwei/workspace/demo/Gemfile",
+		"/home/zwei/workspace/nbd/Gemfile",
+		"/home/zwei/workspace/demo/app/views/people/index.xml.erb",
+		"/home/zwei/workspace/demo/app/helpers/admin/people_helper.rb",
+		"/home/zwei/workspace/demo/app/views/admin/people/show.html.erb",
+		"/home/zwei/workspace/nbd/public/stylesheets/theme_demo.css",
+		"/home/zwei/workspace/nbd/doc/cms-flow/Edit_Media_File.html",
+		"/home/zwei/workspace/nbd/config/deploy.rb",
+		"/home/zwei/workspace/nbd/config/database.yml",
+		"/home/zwei/workspace/nbd/app/controllers/sessions_controller.rb",
+		"/home/zwei/workspace/nbd/app/controllers/authentications_controller.rb",
+		"/home/zwei/workspace/nbd/app/controllers/articles_controller.rb",
+		"/home/zwei/workspace/nbd/app/controllers/features_controller.rb",
+		"/home/zwei/workspace/nbd/app/controllers/galleries_controller.rb",
+		"/home/zwei/workspace/nbd/app/controllers/columns_controller.rb",
+		"/home/zwei/workspace/nbd/app/controllers/lives_controller.rb",
+		"/home/zwei/workspace/nbd/app/models/ad_position.rb",
+		"/home/zwei/workspace/nbd/app/controllers/console/console_base_controller.rb",
+		"/home/zwei/workspace/nbd/doc/cms-flow/Console_login.html",
+		"/home/zwei/workspace/nbd/config.ru",
+		"/home/zwei/workspace/nbd/public/stylesheets/style_console_old.css",
+		"/home/zwei/workspace/nbd/Capfile",
+		"/home/zwei/workspace/nbd/app/views/kaminari/_paginator.html.erb",
+		"/home/zwei/workspace/nbd/app/controllers/api/touzibaos_controller.rb",
+		"/home/zwei/workspace/nbd/app/controllers/api/newspapers_controller.rb",
+		"/home/zwei/workspace/nbd/app/controllers/console/images_controller.rb",
+		"/home/zwei/workspace/nbd/app/views/layouts/top_bbs.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/touzibao.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_special_nav.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_feature_top.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/_nav.html.erb",
+		"/home/zwei/workspace/nbd/app/views/layouts/#console.html.erb#"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"signin_url",
+			"  \n",
+			"of_child_column_for_ntt",
+			"of_column",
+			"top_bar",
+			"tor_bar",
+			"published",
+			"of_column",
+			"of",
+			"xml",
+			"people",
+			"premium",
+			"www",
+			"journalists",
+			"nbd_journalists",
+			"www",
+			"WWW_EXP",
+			"link_to",
+			"log",
+			"logger",
+			"current_user",
+			"check_ntt_article",
+			"oau",
+			" "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/home/zwei/workspace/zwei_app"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/helpers/application_helper.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/helpers/users_helper.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								380
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/users_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1821,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1666,
+								1666
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/user.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								605,
+								605
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 306.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/sessions_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								340,
+								340
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1397,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/users/new.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								372,
+								372
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/users/_user.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/users/index.html.erb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								188,
+								188
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"index",
+				"app/views/index.html.erb"
+			],
+			[
+				"analytics",
+				"nbd/app/views/layouts/_analytics.html.erb"
+			],
+			[
+				"footer_v3",
+				"nbd/app/views/layouts/_footer_v3.html.erb"
+			],
+			[
+				"route",
+				"nbd/config/routes.rb"
+			],
+			[
+				"modelarticle",
+				"nbd/app/models/article.rb"
+			],
+			[
+				"gemfile",
+				"demo/Gemfile"
+			],
+			[
+				"applica",
+				"config/application.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/workspace/shopping/shopping.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 311.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
