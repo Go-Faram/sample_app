@@ -17,7 +17,8 @@
 
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
-
+      <label>验证码</label>
+      <%= recaptcha_tags :public_key => ENV['RECAPTCHA_PUBLIC_KEY'] %>
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
 

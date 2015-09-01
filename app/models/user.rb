@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, length: { minimum: 6 }
 
+	attr_accessor :height
+
 	def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
@@ -46,4 +48,3 @@ def unfollow!(other_user)
       self.remember_token = User.hash(User.new_remember_token)
     end
 end
-	

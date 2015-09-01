@@ -8,7 +8,7 @@ class Micropost < ActiveRecord::Base
   # Returns microposts from the users being followed by the given user.
   def self.from_users_followed_by(user)
     microposts = Rails.cache.read("posts")
-    byebug
+    # byebug
     unless microposts
       followed_user_ids = "SELECT followed_id FROM relationships
       WHERE follower_id = :user_id"
@@ -18,7 +18,7 @@ class Micropost < ActiveRecord::Base
       Rails.cache.write("posts",microposts)
       # return posts
     end
-    byebug
+    # byebug
     return microposts
   end
 end

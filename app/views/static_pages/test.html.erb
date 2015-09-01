@@ -1,0 +1,5 @@
+<%= form_for @article do |f| %>
+  <%= render "shared/errors", object: @article %>
+  <%= f.text_field :field_1, class: "form-control" %>
+
+<% end %>

@@ -35,4 +35,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Set variables for Recaptcha on Localhost
+   ENV['RECAPTCHA_PUBLIC_KEY'] =  '6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy'
+   ENV['RECAPTCHA_PRIVATE_KEY'] = '6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx'
 end
