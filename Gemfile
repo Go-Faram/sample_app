@@ -15,6 +15,8 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'haml'
 
 group :development do
+  gem "binding_of_caller"
+  gem "better_errors"
   gem "byebug"
 end
 

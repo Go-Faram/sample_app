@@ -5,7 +5,9 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
   resources :sessions,      only: [:new, :create, :destroy]
   resources :microposts,    only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
