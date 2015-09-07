@@ -523,7 +523,7 @@
 			"file": "app/controllers/articles_controller.rb",
 			"settings":
 			{
-				"buffer_size": 855,
+				"buffer_size": 945,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "app/models/article.rb",
 			"settings":
 			{
-				"buffer_size": 120,
+				"buffer_size": 141,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +555,7 @@
 			"file": "app/views/articles/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 708,
+				"buffer_size": 321,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,7 +563,15 @@
 			"file": "app/controllers/comments_controller.rb",
 			"settings":
 			{
-				"buffer_size": 316,
+				"buffer_size": 571,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/migrate/20150901073532_create_articles.rb",
+			"settings":
+			{
+				"buffer_size": 173,
 				"line_ending": "Unix"
 			}
 		},
@@ -600,16 +608,16 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "me",
+		"last_filter": "in",
 		"selected_items":
 		[
 			[
-				"me",
-				"View: Toggle Menu"
-			],
-			[
 				"in",
 				"Package Control: Install Package"
+			],
+			[
+				"me",
+				"View: Toggle Menu"
 			],
 			[
 				"pa",
@@ -692,7 +700,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 538.0
+		"width": 457.0
 	},
 	"console":
 	{
@@ -727,19 +735,20 @@
 	],
 	"file_history":
 	[
+		"/home/zwei/workspace/zwei_app/config/database.yml",
 		"/home/zwei/workspace/zwei_app/Gemfile",
+		"/home/zwei/workspace/zwei_app/db/migrate/20150902074607_create_comments.rb",
+		"/home/zwei/workspace/zwei_app/db/migrate/20150901073532_create_articles.rb",
 		"/home/zwei/workspace/zwei_app/app/models/article.rb",
 		"/home/zwei/workspace/zwei_app/app/views/articles/_form.html.erb",
 		"/home/zwei/workspace/zwei_app/app/views/articles/show.html.erb",
 		"/home/zwei/workspace/zwei_app/app/views/articles/index.html.erb",
 		"/home/zwei/workspace/zwei_app/app/views/articles/edit.html.erb",
 		"/home/zwei/workspace/zwei_app/app/views/articles/new.html.erb",
-		"/home/zwei/workspace/zwei_app/db/migrate/20150902074607_create_comments.rb",
 		"/home/zwei/workspace/zwei_app/db/migrate/20140709103359_add_remember_token_to_users.rb",
 		"/home/zwei/workspace/zwei_app/app/assets/javascripts/application.js",
 		"/home/zwei/workspace/zwei_app/app/views/layouts/_shim.html.erb",
 		"/home/zwei/workspace/zwei_app/.gitignore",
-		"/home/zwei/workspace/zwei_app/db/migrate/20150901073532_create_articles.rb",
 		"/home/zwei/workspace/zwei_app/app/models/micropost.rb",
 		"/home/zwei/workspace/zwei_app/app/views/static_pages/test.html.erb",
 		"/home/zwei/workspace/nbd/app/models/koubeibang.rb",
@@ -853,8 +862,7 @@
 		"/home/zwei/workspace/nbd/app/helpers/koubeibang/koubeibang_votes_helper.rb",
 		"/home/zwei/workspace/nbd/app/views/layouts/mobile_api.html.erb",
 		"/home/zwei/workspace/nbd/app/views/columns/home_hourly_news.js.erb",
-		"/home/zwei/workspace/nbd/app/views/koubeibang/sessions/new.html.erb",
-		"/home/zwei/workspace/nbd/app/views/koubeibang/koubeibang_mobiles/reload_captcha.js.erb"
+		"/home/zwei/workspace/nbd/app/views/koubeibang/sessions/new.html.erb"
 	],
 	"find":
 	{
@@ -889,6 +897,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" ",
+			"youcheng",
+			"czldgd",
 			"favicon_link_tag",
 			"ujs",
 			"better_errors",
@@ -1013,10 +1024,7 @@
 			"session",
 			"jVote_item",
 			"items",
-			"jVote_item",
-			",",
-			"VOTE_LIST_IDS",
-			"请填写完整的表单.注意:\\n1.公司名称和股票代码为必填内容\\n2.股票代码为6位数字"
+			"jVote_item"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1079,7 +1087,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -1088,15 +1096,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 855,
+						"buffer_size": 945,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								496,
-								496
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1110,7 +1118,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1119,15 +1127,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 120,
+						"buffer_size": 141,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								56,
-								56
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1139,7 +1147,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1170,7 +1178,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1199,7 +1207,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1208,15 +1216,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 708,
+						"buffer_size": 321,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								306,
-								306
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1230,7 +1238,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1239,15 +1247,46 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 316,
+						"buffer_size": 571,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								315,
-								315
+								571,
+								571
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "db/migrate/20150901073532_create_articles.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
 							]
 						],
 						"settings":
@@ -1263,7 +1302,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "config/routes.rb",
 					"semi_transient": false,
 					"settings":
@@ -1290,7 +1329,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1353,6 +1392,18 @@
 		"selected_items":
 		[
 			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"data",
+				"config/database.yml"
+			],
+			[
 				"commentcont",
 				"app/controllers/comments_controller.rb"
 			],
@@ -1369,10 +1420,6 @@
 				"app/models/comment.rb"
 			],
 			[
-				"gem",
-				"Gemfile"
-			],
-			[
 				"gemm",
 				"db/migrate/20140709103359_add_remember_token_to_users.rb"
 			],
@@ -1387,10 +1434,6 @@
 			[
 				"git",
 				".gitignore"
-			],
-			[
-				"route",
-				"config/routes.rb"
 			],
 			[
 				"article",
@@ -1859,10 +1902,6 @@
 			[
 				"_article_content.html.erb",
 				"app/views/articles/_article_content.html.erb"
-			],
-			[
-				"showj",
-				"app/views/api/articles/show.json.rabl"
 			]
 		],
 		"width": 0.0
