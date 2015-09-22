@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
 	has_many :microposts, dependent: :destroy
 	has_many :relationships, foreign_key: "follower_id", dependent: :destroy
 	has_many :followed_users, through: :relationships, source: :followed
@@ -37,6 +38,11 @@ class User < ActiveRecord::Base
 
   def follow!(other_user)
     relationships.create!(followed_id: other_user.id)
+  end
+
+
+  def admin?
+    true
   end
 
 def unfollow!(other_user)

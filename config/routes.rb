@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   resources :users do
     member do
       get :following, :followers
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/admin_sign', to: 'static_pages#admin_sign', via: 'get'
+  match '/admin_session', to: 'static_pages#admin_session', via: 'post'
 
 
  match '/signup',  to: 'users#new',            via: 'get'

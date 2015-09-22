@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"admin",
+				"admin_session"
+			],
+			[
 				"text",
 				"text_field"
 			],
@@ -510,28 +514,91 @@
 			[
 				"sta",
 				"state"
-			],
-			[
-				"revi",
-				"review"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/controllers/articles_controller.rb",
+			"file": "app/models/ability.rb",
 			"settings":
 			{
-				"buffer_size": 947,
+				"buffer_size": 1172,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/article.rb",
+			"file": "app/views/articles/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 256,
+				"buffer_size": 657,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 1553,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/admin.rb",
+			"settings":
+			{
+				"buffer_size": 269,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2514,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/static_pages_controller.rb",
+			"settings":
+			{
+				"buffer_size": 415,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "class MobileController < ApplicationController::API\n  \nend\n",
+			"file": "app/controllers/mobile_controller.rb",
+			"file_size": 56,
+			"file_write_time": 130873811749876900,
+			"settings":
+			{
+				"buffer_size": 59,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/static_pages/admin_sign.html.erb",
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/articles_controller.rb",
+			"settings":
+			{
+				"buffer_size": 947,
 				"line_ending": "Unix"
 			}
 		}
@@ -677,26 +744,31 @@
 		"/home/zwei/workspace/zwei_app",
 		"/home/zwei/workspace/zwei_app/app",
 		"/home/zwei/workspace/zwei_app/app/assets",
+		"/home/zwei/workspace/zwei_app/app/controllers",
 		"/home/zwei/workspace/zwei_app/app/models",
 		"/home/zwei/workspace/zwei_app/app/views",
 		"/home/zwei/workspace/zwei_app/app/views/articles",
 		"/home/zwei/workspace/zwei_app/app/views/layouts",
-		"/home/zwei/workspace/zwei_app/app/views/static_pages",
-		"/home/zwei/workspace/zwei_app/db",
-		"/home/zwei/workspace/zwei_app/db/migrate"
+		"/home/zwei/workspace/zwei_app/app/views/sessions",
+		"/home/zwei/workspace/zwei_app/app/views/static_pages"
 	],
 	"file_history":
 	[
+		"/home/zwei/workspace/zwei_app/app/controllers/application_controller.rb",
+		"/home/zwei/workspace/zwei_app/Gemfile",
+		"/home/zwei/workspace/zwei_app/db/migrate/20150922062438_add_devise_to_users.rb",
+		"/home/zwei/workspace/zwei_app/app/helpers/application_helper.rb",
+		"/home/zwei/workspace/zwei_app/config/initializers/devise.rb",
 		"/home/zwei/workspace/zwei_app/config/routes.rb",
-		"/home/zwei/workspace/zwei_app/app/controllers/articles_controller.rb",
-		"/home/zwei/workspace/zwei_app/app/models/article.rb",
-		"/home/zwei/workspace/zwei_app/app/views/layouts/application.html.erb",
+		"/home/zwei/workspace/zwei_app/config/environments/development.rb",
 		"/home/zwei/workspace/zwei_app/app/models/comment.rb",
+		"/home/zwei/workspace/zwei_app/app/models/article.rb",
+		"/home/zwei/workspace/zwei_app/app/controllers/articles_controller.rb",
+		"/home/zwei/workspace/zwei_app/app/views/layouts/application.html.erb",
 		"/home/zwei/workspace/zwei_app/app/views/articles/show.html.erb",
 		"/home/zwei/workspace/zwei_app/app/controllers/comments_controller.rb",
 		"/home/zwei/workspace/zwei_app/db/migrate/20150901073532_create_articles.rb",
 		"/home/zwei/workspace/zwei_app/config/database.yml",
-		"/home/zwei/workspace/zwei_app/Gemfile",
 		"/home/zwei/workspace/zwei_app/db/migrate/20150902074607_create_comments.rb",
 		"/home/zwei/workspace/zwei_app/app/views/articles/_form.html.erb",
 		"/home/zwei/workspace/zwei_app/app/views/articles/index.html.erb",
@@ -809,12 +881,7 @@
 		"/home/zwei/workspace/nbd/app/views/mobile_server/_live_news_article.html.erb",
 		"/home/zwei/workspace/nbd/app/views/koubeibang/koubeibang_mobiles/success1.html.erb",
 		"/home/zwei/workspace/nbd/app/views/koubeibang/koubeibang_mobiles/start.html.erb",
-		"/home/zwei/workspace/nbd/app/views/koubeibang/koubeibang_mobiles/signin.html.erb",
-		"/home/zwei/workspace/nbd/app/views/koubeibang/koubeibang_mobiles/choose.html.erb",
-		"/home/zwei/workspace/nbd/config/application.rb",
-		"/home/zwei/workspace/nbd/db/2015_08_13_update_koubeibang_vote.sql",
-		"/home/zwei/workspace/nbd/app/controllers/reviews_controller.rb",
-		"/home/zwei/workspace/nbd/app/views/koubeibang/koubeibangs/success.html.erb"
+		"/home/zwei/workspace/nbd/app/views/koubeibang/koubeibang_mobiles/signin.html.erb"
 	],
 	"find":
 	{
@@ -849,6 +916,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"signed_in",
+			"def current_user",
+			"current_user",
 			" ",
 			"youcheng",
 			"czldgd",
@@ -973,10 +1043,7 @@
 			"VOTE_LIST_IDS",
 			"passed",
 			"股票代码为",
-			"session",
-			"jVote_item",
-			"items",
-			"jVote_item"
+			"session"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1039,16 +1106,169 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/articles_controller.rb",
+					"file": "app/models/ability.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 947,
+						"buffer_size": 1172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1147,
+								1147
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/articles/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								340,
+								340
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/ERB Autocomplete/erb.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/models/user.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/admin.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								763,
+								763
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/static_pages_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 415,
 						"regions":
 						{
 						},
@@ -1070,24 +1290,55 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/models/article.rb",
+					"buffer": 6,
+					"file": "app/views/layouts/application.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 256,
+						"buffer_size": 882,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								144,
-								144
+								410,
+								410
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/ERB Autocomplete/erb.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/controllers/mobile_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 59,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
 							]
 						],
 						"settings":
@@ -1100,6 +1351,69 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/static_pages/admin_sign.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								128,
+								128
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"open_with_edit": true,
+							"syntax": "Packages/ERB Autocomplete/erb.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/controllers/articles_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"colorcode": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1162,20 +1476,72 @@
 		"selected_items":
 		[
 			[
-				"article.rb",
-				"app/models/article.rb"
-			],
-			[
-				"articlecon",
-				"app/controllers/articles_controller.rb"
+				"applicationcontroller",
+				"app/controllers/application_controller.rb"
 			],
 			[
 				"gem",
 				"Gemfile"
 			],
 			[
+				"admin",
+				"app/models/admin.rb"
+			],
+			[
+				"add_use",
+				"db/migrate/20150922062438_add_devise_to_users.rb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"sta",
+				"app/controllers/static_pages_controller.rb"
+			],
+			[
+				"devise",
+				"config/initializers/devise.rb"
+			],
+			[
+				"layoutapp",
+				"app/views/layouts/application.html.erb"
+			],
+			[
 				"route",
 				"config/routes.rb"
+			],
+			[
+				"develop",
+				"config/environments/development.rb"
+			],
+			[
+				"applicationher",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"article",
+				"app/controllers/articles_controller.rb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"ab",
+				"app/models/ability.rb"
+			],
+			[
+				"co",
+				"app/models/comment.rb"
+			],
+			[
+				"article.rb",
+				"app/models/article.rb"
+			],
+			[
+				"articlecon",
+				"app/controllers/articles_controller.rb"
 			],
 			[
 				"data",
@@ -1208,10 +1574,6 @@
 			[
 				"git",
 				".gitignore"
-			],
-			[
-				"article",
-				"app/controllers/articles_controller.rb"
 			],
 			[
 				"koubeibang.rb",
@@ -1302,16 +1664,8 @@
 				"app/models/staff.rb"
 			],
 			[
-				"applicationcontroller",
-				"app/controllers/application_controller.rb"
-			],
-			[
 				"usercont",
 				"app/controllers/users_controller.rb"
-			],
-			[
-				"user",
-				"app/models/user.rb"
 			],
 			[
 				"articlecontro",
@@ -1380,10 +1734,6 @@
 			[
 				"registrations",
 				"app/controllers/registrations_controller.rb"
-			],
-			[
-				"rout",
-				"config/routes.rb"
 			],
 			[
 				"consolearticlefrom",
@@ -1636,42 +1986,6 @@
 			[
 				"mobile_responsive",
 				"app/views/layouts/mobile_responsive.html.erb"
-			],
-			[
-				"confirm.html.erb",
-				"app/views/koubeibang/koubeibangs/confirm.html.erb"
-			],
-			[
-				"koubeibangstart",
-				"app/views/koubeibang/koubeibang_mobiles/start.html.erb"
-			],
-			[
-				"koubeibangmobilenew",
-				"app/views/koubeibang/koubeibang_mobiles/new.html.erb"
-			],
-			[
-				"intro",
-				"app/views/koubeibang/koubeibangs/intro.html.erb"
-			],
-			[
-				"gemlo",
-				"Gemfile.lock"
-			],
-			[
-				"articleba",
-				"app/controllers/articles_base_controller.rb"
-			],
-			[
-				"mobile_server/_article_content.html.erb",
-				"app/views/mobile_server/_article_content.html.erb"
-			],
-			[
-				"mobile_server/_section_content.html.erb",
-				"app/views/mobile_server/_section_content.html.erb"
-			],
-			[
-				"rolling_news.json.rabl",
-				"app/views/api/articles/rolling_news.json.rabl"
 			]
 		],
 		"width": 0.0
