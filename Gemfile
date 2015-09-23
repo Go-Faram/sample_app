@@ -16,6 +16,7 @@ gem 'haml'
 gem 'cancancan'
 gem 'devise'
 gem 'rails-api'
+gem 'mechanize'
 group :development do
   gem "binding_of_caller"
   gem "better_errors"
